@@ -1,0 +1,12 @@
+def compute_result(a, b):
+    product = a * b
+    if product <= 1000:
+        return product
+    else:
+        return a + b
+
+# Example usage
+result1 = compute_result(10, 20)
+result2 = compute_result(50, 30)
+print("Result 1:", result1)
+print("Result 2:", result2)
