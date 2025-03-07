@@ -1,0 +1,6 @@
+# Given list
+my_list = [5, 20, 15, 20, 25, 50, 20]
+
+# Removing all occurrences of 20
+my_list = [x for x in my_list if x != 20]
+print("Updated List:", my_list)
