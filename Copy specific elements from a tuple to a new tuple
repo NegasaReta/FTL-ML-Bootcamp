@@ -1,0 +1,6 @@
+# Given tuple
+input_tuple = (11, 22, 33, 44, 55, 66, 77)
+
+# Copying specific elements
+output_tuple = (input_tuple[3], input_tuple[4])
+print("New Tuple:", output_tuple)
