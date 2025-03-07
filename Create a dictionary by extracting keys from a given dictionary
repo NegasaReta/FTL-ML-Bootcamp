@@ -1,0 +1,9 @@
+# Given dictionary
+sample_dict = {"name": "Kelly", "age": 25, "salary": 8000, "city": "New York"}
+
+# Keys to extract
+keys_to_extract = ["name", "salary"]
+
+# Creating new dictionary
+new_dict = {key: sample_dict[key] for key in keys_to_extract}
+print("New Dictionary:", new_dict)
