@@ -1,0 +1,31 @@
+guests = {}
+guests["Alice"] = (28, "alice@email.com")
+guests["Bob"] = (35, "bob@email.com")
+guests["Charlie"] = (30, "charlie@email.com")
+guests["David"] = (22, "david@email.com")
+del guests["Bob"]
+#function used that used to get guest information
+def get_guest_info(guest_name):
+    if guest_name in guests:
+        age, email = guests[guest_name]
+        return f"{guest_name} (Age: {age}) is coming to the party! Email: {email}"
+    else:
+        return f"{guest_name} is not on the guest list."
+#function defunition of add guest to the dictionary using tuple 
+def add_guest(name, age, email):
+    if name in guests:
+        update = input(f"{name} is already on the guest list. Update details? (yes/no): ").strip().lower()
+        if update == "yes":
+            guests[name] = (age, email)
+    else:
+        guests[name] = (age, email)
+
+#function defined to display the guests by age in order
+def display_guests_by_age():
+    sorted_guests = sorted(guests.items(), key=lambda item: item[1][0])
+    for name, (age, email) in sorted_guests:
+        print(f"{name} (Age: {age}) - Email: {email}")
+
+# Example of adding a guest
+add_guest("Eve", 25, "eve@email.com")
+display_guests_by_age()
